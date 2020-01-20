@@ -1,4 +1,4 @@
-{% set version = "2.0-8" %}
+{% set version = '2.0-8' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -7,16 +7,15 @@ package:
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: ISwR_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/ISwR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ISwR/ISwR_{{ version }}.tar.gz
   sha256: eabbe6346930bf0a30d5718cd7446ca389db1d83bc09c41732982b64943d5ead
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -36,18 +35,30 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=ISwR
-  license: GPL (>= 2)
-  summary: 'Data sets and scripts for text examples and exercises in  P. Dalgaard (2008), `Introductory
-    Statistics with R'', 2nd ed., Springer Verlag, ISBN 978-0387790534.  '
-  license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license: GPL-2
+  summary: Data sets and scripts for text examples and exercises in P. Dalgaard (2008), `Introductory
+    Statistics with R', 2nd ed., Springer Verlag, ISBN 978-0387790534.
+  license_family: GPL2
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
-    - cbrueffer
-    - dbast
+
+# Package: ISwR
+# Version: 2.0-8
+# Date: 2019-12-30
+# Title: Introductory Statistics with R
+# Author: Peter Dalgaard
+# Maintainer: Peter Dalgaard <pd.mes@cbs.dk>
+# Description: Data sets and scripts for text examples and exercises in P. Dalgaard (2008), `Introductory Statistics with R', 2nd ed., Springer Verlag, ISBN 978-0387790534.
+# Depends: R (>= 2.6.0)
+# Suggests: survival,MASS
+# License: GPL (>= 2)
+# ZipData: no
+# LazyData: yes
+# NeedsCompilation: no
+# Packaged: 2020-01-15 09:57:42 UTC; pd
+# Repository: CRAN
+# Date/Publication: 2020-01-20 09:50:02 UTC
