@@ -1,11 +1,11 @@
-About r-iswr
-============
+About r-iswr-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-iswr-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=ISwR
 
 Package license: GPL-2
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-iswr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Data sets and scripts for text examples and exercises in P. Dalgaard (2008), `Introductory Statistics with R', 2nd ed., Springer Verlag, ISBN 978-0387790534.
 
