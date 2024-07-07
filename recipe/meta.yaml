@@ -1,6 +1,5 @@
 {% set version = '2.0-8' %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-iswr
@@ -13,8 +12,7 @@ source:
   sha256: eabbe6346930bf0a30d5718cd7446ca389db1d83bc09c41732982b64943d5ead
 
 build:
-  merge_build_host: True  # [win]
-  number: 3
+  number: 4
   noarch: generic
   rpaths:
     - lib/R/lib/
