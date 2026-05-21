@@ -1,4 +1,4 @@
-{% set version = "2.0-11" %}
+{% set version = "2.0-12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ISwR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ISwR/ISwR_{{ version }}.tar.gz
-  sha256: 31e21ee7733b304041d50e805029d129ddad0ac56452e3fa04f0f5fad9c9e902
+  sha256: e246cd59495eef28c0efed2d34d3a6342de454783677d2e55772913fd5236e85
 
 build:
   number: 0
